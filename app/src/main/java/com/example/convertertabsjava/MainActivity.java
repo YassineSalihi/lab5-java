@@ -32,14 +32,4 @@ public class MainActivity extends AppCompatActivity {
                 (tab, position) -> tab.setText(position == 0 ? "Température" : "Distance")
         ).attach();
     }
-
-    @Override
-    public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setTitle("Quitter")
-                .setMessage("Voulez-vous vraiment quitter l'application ?")
-                .setPositiveButton("Oui", (dialog, which) -> finish())
-                .setNegativeButton("Non", null)
-                .show();
-    }
 }
